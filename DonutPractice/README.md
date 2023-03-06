@@ -1,25 +1,24 @@
-#  Donut Practice
+#  Not Donut it's Car!
 
 ## Export Asset
 
 ```swift
-let asset = MDLAsset()
-asset.add(mdlMesh)
-
-// export .obj format
-let fileExtension = "obj"
-guard MDLAsset.canExportFileExtension(fileExtension) else {
-  fatalError("Cannot export a .\(fileExtension) format")
-}
-
-do {
-  // Save at document directory
-  guard let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-    fatalError("Failed to create url")
+private func exportAsset(_ mesh: MDLMesh, fileExtension: String, fileName: String) throws {
+  let asset = MDLAsset()
+  asset.add(mesh)
+  
+  guard MDLAsset.canExportFileExtension(fileExtension) else {
+    throw MetalError.invalidFileExtension
   }
-  let urlToSave = url.appending(path: "test_primitive.\(fileExtension)")
-  try asset.export(to: urlToSave)
-} catch {
-  // Handle error
+  
+  do {
+    guard let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+      throw MetalError.failedToGetDocumentDirectoryURL
+    }
+    let absoluteURL = url.appending(path: "\(fileName).\(fileExtension)")
+    try asset.export(to: absoluteURL)
+  } catch {
+    throw error
+  }
 }
 ```

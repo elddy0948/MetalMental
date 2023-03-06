@@ -10,8 +10,10 @@
 		B4EED9EB29B5BAB1008CC5F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EED9EA29B5BAB1008CC5F0 /* AppDelegate.swift */; };
 		B4EED9ED29B5BAB1008CC5F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EED9EC29B5BAB1008CC5F0 /* ViewController.swift */; };
 		B4EED9EF29B5BAB2008CC5F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4EED9EE29B5BAB2008CC5F0 /* Assets.xcassets */; };
-		B4EED9F229B5BAB2008CC5F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4EED9F029B5BAB2008CC5F0 /* Main.storyboard */; };
 		B4EED9FA29B5C858008CC5F0 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = B4EED9F929B5C858008CC5F0 /* Shader.metal */; };
+		B4EED9FE29B5D783008CC5F0 /* Car.mtl in Resources */ = {isa = PBXBuildFile; fileRef = B4EED9FC29B5D783008CC5F0 /* Car.mtl */; };
+		B4EED9FF29B5D783008CC5F0 /* Car.obj in Resources */ = {isa = PBXBuildFile; fileRef = B4EED9FD29B5D783008CC5F0 /* Car.obj */; };
+		B4EEDA0129B5F3A6008CC5F0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EEDA0029B5F3A6008CC5F0 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,10 +21,12 @@
 		B4EED9EA29B5BAB1008CC5F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4EED9EC29B5BAB1008CC5F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4EED9EE29B5BAB2008CC5F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B4EED9F129B5BAB2008CC5F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4EED9F329B5BAB2008CC5F0 /* DonutPractice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DonutPractice.entitlements; sourceTree = "<group>"; };
 		B4EED9F929B5C858008CC5F0 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
 		B4EED9FB29B5D1D5008CC5F0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4EED9FC29B5D783008CC5F0 /* Car.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Car.mtl; sourceTree = "<group>"; };
+		B4EED9FD29B5D783008CC5F0 /* Car.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Car.obj; sourceTree = "<group>"; };
+		B4EEDA0029B5F3A6008CC5F0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +63,11 @@
 				B4EED9EA29B5BAB1008CC5F0 /* AppDelegate.swift */,
 				B4EED9EC29B5BAB1008CC5F0 /* ViewController.swift */,
 				B4EED9EE29B5BAB2008CC5F0 /* Assets.xcassets */,
-				B4EED9F029B5BAB2008CC5F0 /* Main.storyboard */,
 				B4EED9F329B5BAB2008CC5F0 /* DonutPractice.entitlements */,
 				B4EED9F929B5C858008CC5F0 /* Shader.metal */,
+				B4EED9FC29B5D783008CC5F0 /* Car.mtl */,
+				B4EED9FD29B5D783008CC5F0 /* Car.obj */,
+				B4EEDA0029B5F3A6008CC5F0 /* main.swift */,
 			);
 			path = DonutPractice;
 			sourceTree = "<group>";
@@ -124,8 +130,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4EED9FE29B5D783008CC5F0 /* Car.mtl in Resources */,
 				B4EED9EF29B5BAB2008CC5F0 /* Assets.xcassets in Resources */,
-				B4EED9F229B5BAB2008CC5F0 /* Main.storyboard in Resources */,
+				B4EED9FF29B5D783008CC5F0 /* Car.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,22 +145,12 @@
 			files = (
 				B4EED9FA29B5C858008CC5F0 /* Shader.metal in Sources */,
 				B4EED9ED29B5BAB1008CC5F0 /* ViewController.swift in Sources */,
+				B4EEDA0129B5F3A6008CC5F0 /* main.swift in Sources */,
 				B4EED9EB29B5BAB1008CC5F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		B4EED9F029B5BAB2008CC5F0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B4EED9F129B5BAB2008CC5F0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B4EED9F429B5BAB2008CC5F0 /* Debug */ = {
@@ -282,7 +279,6 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,7 +305,6 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
