@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		B4B506DF29B71CBF0008C633 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B506DE29B71CBF0008C633 /* AppDelegate.m */; };
-		B4B506E229B71CBF0008C633 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B506E129B71CBF0008C633 /* ViewController.m */; };
+		B4B506E229B71CBF0008C633 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B4B506E129B71CBF0008C633 /* ViewController.mm */; };
 		B4B506E429B71CBF0008C633 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B506E329B71CBF0008C633 /* Assets.xcassets */; };
 		B4B506E729B71CBF0008C633 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B506E529B71CBF0008C633 /* Main.storyboard */; };
 		B4B506E929B71CBF0008C633 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B506E829B71CBF0008C633 /* main.m */; };
 		B4B5074F29B71E0C0008C633 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4B5074529B71E0C0008C633 /* README.md */; };
 		B4B5075029B71E0C0008C633 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4B5074C29B71E0C0008C633 /* LICENSE.txt */; };
 		B4B5075129B71E0C0008C633 /* MakeSingleHeader.py in Resources */ = {isa = PBXBuildFile; fileRef = B4B5074E29B71E0C0008C633 /* MakeSingleHeader.py */; };
+		B4B5075429B71E960008C633 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B5075329B71E950008C633 /* Foundation.framework */; };
+		B4B5075629B71E9A0008C633 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B5075529B71E9A0008C633 /* Metal.framework */; };
+		B4B5075829B71EA50008C633 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B5075729B71EA50008C633 /* QuartzCore.framework */; };
+		B4B5075B29B71F080008C633 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4B5075929B71F080008C633 /* Renderer.cpp */; };
+		B4B5075D29B721A60008C633 /* RendererAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = B4B5075C29B721A60008C633 /* RendererAdapter.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +27,7 @@
 		B4B506DD29B71CBF0008C633 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4B506DE29B71CBF0008C633 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B4B506E029B71CBF0008C633 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B4B506E129B71CBF0008C633 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B4B506E129B71CBF0008C633 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		B4B506E329B71CBF0008C633 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4B506E629B71CBF0008C633 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4B506E829B71CBF0008C633 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -117,6 +122,13 @@
 		B4B5074B29B71E0C0008C633 /* CADefines.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CADefines.hpp; sourceTree = "<group>"; };
 		B4B5074C29B71E0C0008C633 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		B4B5074E29B71E0C0008C633 /* MakeSingleHeader.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = MakeSingleHeader.py; sourceTree = "<group>"; };
+		B4B5075329B71E950008C633 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B4B5075529B71E9A0008C633 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		B4B5075729B71EA50008C633 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B4B5075929B71F080008C633 /* Renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		B4B5075A29B71F080008C633 /* Renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
+		B4B5075C29B721A60008C633 /* RendererAdapter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RendererAdapter.mm; sourceTree = "<group>"; };
+		B4D16E0329B72E4F000A691A /* RendererAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RendererAdapter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +136,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B5075629B71E9A0008C633 /* Metal.framework in Frameworks */,
+				B4B5075429B71E960008C633 /* Foundation.framework in Frameworks */,
+				B4B5075829B71EA50008C633 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +151,7 @@
 				B4B506F029B71E0B0008C633 /* metal-cpp */,
 				B4B506DC29B71CBF0008C633 /* MetalCPPWindow */,
 				B4B506DB29B71CBF0008C633 /* Products */,
+				B4B5075229B71E950008C633 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,11 +169,15 @@
 				B4B506DD29B71CBF0008C633 /* AppDelegate.h */,
 				B4B506DE29B71CBF0008C633 /* AppDelegate.m */,
 				B4B506E029B71CBF0008C633 /* ViewController.h */,
-				B4B506E129B71CBF0008C633 /* ViewController.m */,
+				B4B506E129B71CBF0008C633 /* ViewController.mm */,
 				B4B506E329B71CBF0008C633 /* Assets.xcassets */,
 				B4B506E529B71CBF0008C633 /* Main.storyboard */,
 				B4B506E829B71CBF0008C633 /* main.m */,
 				B4B506EA29B71CBF0008C633 /* MetalCPPWindow.entitlements */,
+				B4B5075929B71F080008C633 /* Renderer.cpp */,
+				B4B5075A29B71F080008C633 /* Renderer.hpp */,
+				B4B5075C29B721A60008C633 /* RendererAdapter.mm */,
+				B4D16E0329B72E4F000A691A /* RendererAdapter.h */,
 			);
 			path = MetalCPPWindow;
 			sourceTree = "<group>";
@@ -291,6 +311,16 @@
 			path = SingleHeader;
 			sourceTree = "<group>";
 		};
+		B4B5075229B71E950008C633 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4B5075729B71EA50008C633 /* QuartzCore.framework */,
+				B4B5075529B71E9A0008C633 /* Metal.framework */,
+				B4B5075329B71E950008C633 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -363,8 +393,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4B506E229B71CBF0008C633 /* ViewController.m in Sources */,
+				B4B5075B29B71F080008C633 /* Renderer.cpp in Sources */,
+				B4B506E229B71CBF0008C633 /* ViewController.mm in Sources */,
 				B4B506E929B71CBF0008C633 /* main.m in Sources */,
+				B4B5075D29B721A60008C633 /* RendererAdapter.mm in Sources */,
 				B4B506DF29B71CBF0008C633 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,7 +421,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -433,6 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/metal-cpp/";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -447,7 +480,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -485,6 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/metal-cpp/";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -497,6 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_ENTITLEMENTS = MetalCPPWindow/MetalCPPWindow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -504,7 +539,7 @@
 				DEVELOPMENT_TEAM = SK9D9HK9A2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "/opt/metal/metal-cpp";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/metal-cpp/";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -524,6 +559,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_ENTITLEMENTS = MetalCPPWindow/MetalCPPWindow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -531,7 +567,7 @@
 				DEVELOPMENT_TEAM = SK9D9HK9A2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "/opt/metal/metal-cpp";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/metal-cpp/";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
