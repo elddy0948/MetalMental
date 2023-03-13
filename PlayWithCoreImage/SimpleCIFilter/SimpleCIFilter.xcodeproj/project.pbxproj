@@ -15,6 +15,8 @@
 		B435292429BDEC160036613B /* cat.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B435292329BDEC160036613B /* cat.JPG */; };
 		B435292629BDFE590036613B /* kernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = B435292529BDFE590036613B /* kernel.metal */; };
 		B435292829BDFF6D0036613B /* CustomFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B435292729BDFF6D0036613B /* CustomFilter.swift */; };
+		B435292A29BE2AF60036613B /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B435292929BE2AF60036613B /* VideoViewController.swift */; };
+		B4FB5C9229BF815C004CD4DF /* video.MOV in Resources */ = {isa = PBXBuildFile; fileRef = B4FB5C9129BF815C004CD4DF /* video.MOV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B435292329BDEC160036613B /* cat.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.JPG; sourceTree = "<group>"; };
 		B435292529BDFE590036613B /* kernel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = kernel.metal; sourceTree = "<group>"; };
 		B435292729BDFF6D0036613B /* CustomFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFilter.swift; sourceTree = "<group>"; };
+		B435292929BE2AF60036613B /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		B4FB5C9129BF815C004CD4DF /* video.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.MOV; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				B435290F29BDE6580036613B /* AppDelegate.swift */,
-				B435291129BDE6580036613B /* SceneDelegate.swift */,
-				B435291329BDE6580036613B /* ViewController.swift */,
 				B435291829BDE6590036613B /* Assets.xcassets */,
-				B435291A29BDE6590036613B /* LaunchScreen.storyboard */,
-				B435291D29BDE6590036613B /* Info.plist */,
 				B435292329BDEC160036613B /* cat.JPG */,
-				B435292529BDFE590036613B /* kernel.metal */,
 				B435292729BDFF6D0036613B /* CustomFilter.swift */,
+				B435291D29BDE6590036613B /* Info.plist */,
+				B435292529BDFE590036613B /* kernel.metal */,
+				B435291A29BDE6590036613B /* LaunchScreen.storyboard */,
+				B435291129BDE6580036613B /* SceneDelegate.swift */,
+				B4FB5C9129BF815C004CD4DF /* video.MOV */,
+				B435292929BE2AF60036613B /* VideoViewController.swift */,
+				B435291329BDE6580036613B /* ViewController.swift */,
 			);
 			path = SimpleCIFilter;
 			sourceTree = "<group>";
@@ -131,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4FB5C9229BF815C004CD4DF /* video.MOV in Resources */,
 				B435291C29BDE6590036613B /* LaunchScreen.storyboard in Resources */,
 				B435291929BDE6590036613B /* Assets.xcassets in Resources */,
 				B435292429BDEC160036613B /* cat.JPG in Resources */,
@@ -146,6 +153,7 @@
 			files = (
 				B435292629BDFE590036613B /* kernel.metal in Sources */,
 				B435291429BDE6580036613B /* ViewController.swift in Sources */,
+				B435292A29BE2AF60036613B /* VideoViewController.swift in Sources */,
 				B435291029BDE6580036613B /* AppDelegate.swift in Sources */,
 				B435291229BDE6580036613B /* SceneDelegate.swift in Sources */,
 				B435292829BDFF6D0036613B /* CustomFilter.swift in Sources */,
