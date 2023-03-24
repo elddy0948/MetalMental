@@ -83,19 +83,19 @@ extension ViewController: MTKViewDelegate {
   func draw(in view: MTKView) {
     guard let metalView = view as? MetalView else { return }
     guard let image = image else { return }
-    let size = self.view.bounds.size
+    let size = view.drawableSize
     let commandBuffer = metalView.commandQueue.makeCommandBuffer()!
     
     let renderDestination = CIRenderDestination(
       width: Int(size.width),
       height: Int(size.height),
-      pixelFormat: .rgba16Float,
+      pixelFormat: view.colorPixelFormat,
       commandBuffer: commandBuffer) { () -> MTLTexture in
         return view.currentDrawable!.texture
       }
     
     do {
-      try metalView.context.startTask(toRender: image, from: image.extent, to: renderDestination, at: CGPoint(x: 50, y: 150))
+      try metalView.context.startTask(toRender: image, from: image.extent, to: renderDestination, at: CGPoint(x: 0, y: 0))
       commandBuffer.present(metalView.currentDrawable!)
       commandBuffer.commit()
     } catch {
