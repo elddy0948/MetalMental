@@ -7,17 +7,22 @@ final class ImageCell: UITableViewCell {
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
+    configureViews()
+    layout()
   }
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func configure(image: Image) {
-    
+  func configure(_ image: CGImage?) {
+    guard let image = image else { return }
+    let uiImage = UIImage(cgImage: image)
+    self.cellImageView.image = uiImage
   }
   
   private func configureViews() {
+    selectionStyle = .none
     cellImageView.contentMode = .scaleAspectFit
   }
   

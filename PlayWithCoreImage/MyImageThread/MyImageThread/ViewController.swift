@@ -15,18 +15,19 @@ final class ViewController: UIViewController {
     
     createDataSource()
     imageTableView.reloadData()
-    
   }
   
   private func createDataSource() {
     dataSource = UITableViewDiffableDataSource<Section, Image>(
-      tableView: imageTableView) { tableView, indexPath, itemIdentifier in
+      tableView: imageTableView) { tableView, indexPath, image in
         guard let cell = tableView.dequeueReusableCell(
           withIdentifier: ImageCell.reuseIdentifier,
           for: indexPath) as? ImageCell else {
           return UITableViewCell()
         }
-        cell.backgroundColor = .systemRed
+        let size = CGSize(width: tableView.contentSize.width, height: tableView.contentSize.height)
+        let cgImage = self.downsample(image: image, to: size, scale: 1)
+        cell.configure(cgImage)
         return cell
       }
     
@@ -49,8 +50,24 @@ final class ViewController: UIViewController {
       print(error)
     }
   }
-}
+  
+  private func downsample(image: Image, to pointSize: CGSize, scale: CGFloat) -> CGImage? {
+    guard let url = Bundle.main.url(forResource: image.imageName, withExtension: "jpeg") else { return nil }
+    let options = [kCGImageSourceShouldCache: false] as CFDictionary
+    guard let cgImage = CGImageSourceCreateWithURL(url as CFURL, options) else { return nil }
+    let maxDimensionInPixels = max(pointSize.width, pointSize.height) * scale
 
+    let downsampleOptions = [
+      kCGImageSourceCreateThumbnailFromImageAlways: true,
+      kCGImageSourceShouldCacheImmediately: true,
+      kCGImageSourceCreateThumbnailWithTransform: true,
+      kCGImageSourceThumbnailMaxPixelSize: maxDimensionInPixels
+    ] as CFDictionary
+
+    guard let downsampledImage = CGImageSourceCreateThumbnailAtIndex(cgImage, 0, downsampleOptions) else { return nil }
+    return downsampledImage
+  }
+}
 
 extension ViewController {
   private func configureViews() {
@@ -76,6 +93,6 @@ extension ViewController {
 
 extension ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return UITableView.automaticDimension
+    return 160
   }
 }
